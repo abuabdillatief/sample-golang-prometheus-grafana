@@ -22,6 +22,10 @@ resource "grafana_dashboard" "requests_dashboard" {
     "title" = "API Metrics Dashboard"
     "editable" = true
     "refresh" = "10s"
+     "time" = {
+      "from" = "now-5m"
+      "to" = "now"
+    }
     "panels" = [
       {
         "title" = "Request Count by Path"
